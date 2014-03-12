@@ -51,15 +51,18 @@ def twitterreq(url, method, parameters):
   return response
 
 def fetchsamples():
-  #url = "https://api.twitter.com/1.1/geo/search.json/track=locations=-180,-90,180,90"
-  url = "https://api.twitter.com/1.1/geo/search.json?query=Toronto,Dallas"
-  #url = "https://stream.twitter.com/1/statuses/firehose.json"
-  
+
+  #url = "https://api.twitter.com/1.1/geo/filter.json/track=locations=-180,-90,180,90"
+  #url = "https://api.twitter.com/1.1/geo/search.json?query=Dallas"
+  url = "https://stream.twitter.com/1/statuses/filter.json?locations=-180,-90,180,90"
+  #url = "https://stream.twitter.com/1.1/statuses/filter.json/track=locations=-180,-90,180,-90"
+  #url = "http://search.twitter.com/search.json?q=blue%20angels&rpp=5&include_entities=true&result_type=mixed"
+  #url = "http://stream.twitter.com/1/statuses/filter.json?locations=-180,-90,180,90"
   #can change the url to the newer REST API v. 1.1 instead
   parameters = []
   response = twitterreq(url, "POST", parameters)
   for line in response:
-    print line.strip()
+    print(line.strip())
 
 if __name__ == '__main__':
   fetchsamples()
