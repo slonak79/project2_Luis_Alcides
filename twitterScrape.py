@@ -1,7 +1,8 @@
 import oauth2 as oauth
 import urllib2 as urllib
+import re
 
-# See Assginment 6 instructions or README for how to get these credentials
+
 access_token_key = "277176492-nWAWzJ4XcLjbCDZycv1dGr9xYGAeq0dWr3hQoTrE"
 access_token_secret = "Jv7RS0Rk0EhlhVVSNQLEDAa883Fa9LgEFtM5w3qu6yoPI"
 
@@ -66,3 +67,26 @@ def fetchsamples():
 
 if __name__ == '__main__':
   fetchsamples()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
